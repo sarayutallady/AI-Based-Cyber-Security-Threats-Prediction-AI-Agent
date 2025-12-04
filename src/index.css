@@ -1,0 +1,138 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 210 30% 98%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    --primary: 215 45% 20%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 30% 92%;
+    --secondary-foreground: 215 25% 15%;
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 15% 50%;
+    --accent: 210 35% 88%;
+    --accent-foreground: 215 25% 15%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 215 45% 20%;
+    --chart-1: 215 45% 35%;
+    --chart-2: 0 72% 51%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 199 89% 48%;
+    --sidebar-background: 215 45% 20%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 215 50% 30%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 215 40% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 35% 25%;
+    --sidebar-ring: 215 45% 40%;
+    --gradient-primary: linear-gradient(135deg, hsl(215 45% 20%), hsl(215 50% 30%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 30% 98%));
+    --gradient-background: linear-gradient(180deg, hsl(210 30% 98%), hsl(210 25% 95%));
+    --shadow-card: 0 2px 8px -2px hsl(215 45% 20% / 0.1);
+    --shadow-hover: 0 8px 24px -4px hsl(215 45% 20% / 0.15);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 45% 12%;
+    --foreground: 210 40% 98%;
+    --card: 215 40% 16%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 40% 16%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 215 45% 12%;
+    --secondary: 215 35% 22%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 35% 20%;
+    --muted-foreground: 215 15% 65%;
+    --accent: 215 40% 25%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    --border: 215 35% 22%;
+    --input: 215 35% 22%;
+    --ring: 210 40% 98%;
+    --chart-1: 210 40% 70%;
+    --chart-2: 0 72% 51%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 199 89% 48%;
+    --sidebar-background: 215 45% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 215 50% 20%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 215 40% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 35% 18%;
+    --sidebar-ring: 215 45% 30%;
+    --gradient-primary: linear-gradient(135deg, hsl(215 45% 20%), hsl(215 50% 30%));
+    --gradient-card: linear-gradient(135deg, hsl(215 40% 16%), hsl(215 38% 18%));
+    --gradient-background: linear-gradient(180deg, hsl(215 45% 12%), hsl(215 42% 10%));
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 8px 24px -4px hsl(0 0% 0% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--info)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 10px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.6);
+    }
+  }
+}
