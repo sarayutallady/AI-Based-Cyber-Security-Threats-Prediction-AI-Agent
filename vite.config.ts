@@ -21,8 +21,7 @@ export default defineConfig({
     },
   },
 
-  // Vercel needs this!
   build: {
-    outDir: "dist",
+    outDir: "dist",   // Required for Vercel
   },
 });
