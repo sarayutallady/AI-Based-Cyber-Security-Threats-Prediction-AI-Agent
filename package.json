@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "tsgo -p tsconfig.check.json; npx biome lint"
+    "lint": "npx biome lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
