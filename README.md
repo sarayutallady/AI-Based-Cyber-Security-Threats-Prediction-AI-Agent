@@ -14,6 +14,17 @@ https://ai-based-cyber-security-threats-tyei.onrender.com/
 🎥 **Project Demo Video**  
 https://drive.google.com/file/d/17sssr2oPCeuoUOhYEdLNLmrpWLqqc6-m/view?usp=sharing
 
+
+https://github.com/user-attachments/assets/62e5fb81-592e-4745-9354-234dfdb702c9
+
+
+
+https://github.com/user-attachments/assets/f22bd0e1-9373-425d-ac65-13222cf44dce
+
+
+
+
+
 ---
 
 ## 📌 Key Features
